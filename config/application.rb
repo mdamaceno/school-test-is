@@ -36,7 +36,7 @@ module School
                        routing_specs: false,
                        controller_specs: true,
                        request_specs: false
-      g.fixture_replacement :factory_girl, dir: 'spec/factories'
+      g.factory_girl false
       g.stylesheets = false
       g.javascripts = false
       g.helper = false
