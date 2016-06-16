@@ -1,3 +1,3 @@
 class Student < Base
-  validates :name, presence: true
+  validates :name, :register_number, :status, presence: true
 end
