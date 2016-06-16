@@ -28,4 +28,8 @@ RSpec.describe Student, type: :model do
   it 'is invalid if status is not numeric' do
     expect(build(:student, status: 'aaa')).to_not be_valid
   end
+
+  it 'is invalid if status is not integer' do
+    expect(build(:student, status: 1.5)).to_not be_valid
+  end
 end
