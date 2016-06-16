@@ -17,7 +17,7 @@ gem 'slim-rails'
 
 group :development, :test do
   gem 'byebug'
-  gem 'fakefs', require: 'fakefs/safe'
+  gem 'faker'
   gem 'factory_girl_rails'
 end
 
