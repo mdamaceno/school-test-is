@@ -16,4 +16,16 @@ RSpec.describe Student, type: :model do
   it 'is invalid if no status' do
     expect(build(:student, status: nil)).to_not be_valid
   end
+
+  it 'is invalid if name has more than 45 chars' do
+    expect(build(:student, name: Faker::Lorem.characters(46))).to_not be_valid
+  end
+
+  it 'is invalid if register_number has more than 45 chars' do
+    expect(build(:student, register_number: Faker::Lorem.characters(46))).to_not be_valid
+  end
+
+  it 'is invalid if status is not numeric' do
+    expect(build(:student, status: 'aaa')).to_not be_valid
+  end
 end
