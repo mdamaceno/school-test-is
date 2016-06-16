@@ -30,7 +30,7 @@ end
 
 group :test do
   gem 'database_cleaner'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.4'
   gem 'capybara'
   gem 'brakeman', require: false
 end
