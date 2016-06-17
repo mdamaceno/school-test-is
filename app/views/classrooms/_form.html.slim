@@ -1,15 +1,18 @@
 = simple_form_for(@classroom) do |f|
   - if @classroom.errors.any?
   #error_explanation
-    - @classroom.errors.each do |error|
-      li
-        = error
+    ul
+      - @classroom.errors.each do |error|
+        li
+          = error
 
   .form-group
-    = f.input :student_id, collection: @students, as: :select
+    = f.label :student_id
+    = f.select :student_id, @students.map { |s| [s.name, s.id] }, include_blank: true
 
   .form-group
-    = f.input :course_id, collection: @courses, as: :select
+    = f.label :course_id
+    = f.select :course_id, @courses.map { |s| [s.name, s.id] }, include_blank: true
 
   .form-actions.text-right
     button.btn.btn-primary type="submit" = 'Save'

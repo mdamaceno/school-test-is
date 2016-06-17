@@ -1,9 +1,10 @@
 = simple_form_for(@course) do |f|
   - if @course.errors.any?
   #error_explanation
-    - @course.errors.each do |error|
-      li
-        = error
+    ul
+      - @course.errors.each do |error|
+        li
+          = error
 
   .form-group
     = f.input :name

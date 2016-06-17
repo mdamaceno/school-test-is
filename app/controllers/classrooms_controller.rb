@@ -1,8 +1,8 @@
 class ClassroomsController < ApplicationController
   def new
+    @classroom = Classroom.new
     @students = StudentRepository.all
     @courses = CourseRepository.all
-    @classroom = Classroom.new
   end
 
   def create
@@ -13,7 +13,7 @@ class ClassroomsController < ApplicationController
       if @classroom.save
         format.html { redirect_to new_classroom_path }
       else
-        format.html { render action: 'new' }
+        format.html { redirect_to new_classroom_path }
       end
     end
   end
