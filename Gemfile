@@ -14,6 +14,7 @@ gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'responders'
 gem 'enumerate_it'
 gem 'slim-rails'
+gem 'simple_form'
 
 group :development, :test do
   gem 'byebug'
