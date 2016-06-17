@@ -9,6 +9,11 @@ describe CoursesController, type: :controller do
     it { is_expected.to respond_with_content_type :html }
     it { is_expected.to render_with_layout :application }
     it { is_expected.to render_template :index }
+
+    it 'returns all the courses' do
+      course = create(:course)
+      expect(CourseRepository.all).to include(course)
+    end
   end
 
   describe 'GET #new' do
@@ -23,7 +28,7 @@ describe CoursesController, type: :controller do
 
   describe 'GET #edit' do
     before do
-      get :edit, {id: 1}
+      get :edit, id: 1
     end
     it { is_expected.to respond_with :ok }
     it { is_expected.to respond_with_content_type :html }
