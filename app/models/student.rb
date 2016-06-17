@@ -1,5 +1,5 @@
 class Student < Base
-  has_one :classrooms
+  has_one :classroom
 
   # Validations
   validates :name, :register_number, :status, presence: true
