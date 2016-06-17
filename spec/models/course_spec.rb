@@ -28,4 +28,16 @@ RSpec.describe Course, type: :model do
   it 'is invalid if status is not integer' do
     expect(build(:course, status: 1.5)).to_not be_valid
   end
+
+  describe 'returns status' do
+    it 'active' do
+      course = build(:course, status: 1)
+      expect(course.status_humanize).to eq('active')
+    end
+
+    it 'inactive' do
+      course = build(:course, status: 0)
+      expect(course.status_humanize).to eq('inactive')
+    end
+  end
 end
