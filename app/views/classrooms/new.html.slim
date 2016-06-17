@@ -1,6 +1,6 @@
 div#classroom-form
   h3 = I18n.t('template.classroom.new')
-  p = link_to I18n.t('template.default.back'), root_path, class: 'btn btn-primary'
+  p = link_to I18n.t('template.default.back'), root_path, class: 'btn btn-xs btn-primary'
   = render 'form'
 
   - @courses.each do |course|
