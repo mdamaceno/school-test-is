@@ -35,6 +35,7 @@ pt-BR:
           attributes:
             student_id:
               blank: 'não pode ser vazio'
+              taken: 'já cadastrado'
             course_id:
               blank: 'não pode ser vazio'
   enumerations:
