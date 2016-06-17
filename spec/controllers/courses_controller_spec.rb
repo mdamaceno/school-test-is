@@ -20,6 +20,10 @@ describe CoursesController, type: :controller do
     end
 
     check_response_with_template('new')
+
+    it 'assigns a new course to @course' do
+      expect(assigns(:course)).to be_a_new(Course)
+    end
   end
 
   describe 'GET #edit' do

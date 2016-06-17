@@ -20,6 +20,10 @@ describe StudentsController, type: :controller do
     end
 
     check_response_with_template('new')
+
+    it 'assigns a new student to @student' do
+      expect(assigns(:student)).to be_a_new(Student)
+    end
   end
 
   describe 'GET #edit' do
