@@ -1,0 +1,15 @@
+= simple_form_for(@classroom) do |f|
+  - if @classroom.errors.any?
+  #error_explanation
+    - @classroom.errors.each do |error|
+      li
+        = error
+
+  .form-group
+    = f.input :student_id, collection: @students, as: :select
+
+  .form-group
+    = f.input :course_id, collection: @courses, as: :select
+
+  .form-actions.text-right
+    button.btn.btn-primary type="submit" = 'Save'
