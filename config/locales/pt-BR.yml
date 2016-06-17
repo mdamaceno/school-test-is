@@ -12,6 +12,14 @@ pt-BR:
         student_id: Estudante
         course_id: Curso
         entry_at: 'Matriculado em'
+    errors:
+      models:
+        student:
+          attributes:
+            name:
+              blank: 'Nome não pode ser vazio'
+            register_number:
+              blank: 'Número de registro não pode ser vazio'
   enumerations:
     status:
       active: Ativo
