@@ -21,7 +21,7 @@ describe 'Course management', type: :feature do
         within '#status' do
           choose 'course_status_1'
         end
-        click_button 'Save'
+        click_button I18n.t('template.default.save')
       end.to change(Course, :count).by(1)
     end
 

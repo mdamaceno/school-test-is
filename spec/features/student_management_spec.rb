@@ -21,7 +21,7 @@ describe 'Student management', type: :feature do
         within '#status' do
           choose 'student_status_1'
         end
-        click_button 'Save'
+        click_button I18n.t('template.default.save')
       end.to change(Student, :count).by(1)
     end
 

@@ -26,7 +26,22 @@ pt-BR:
       student:
         name: Nome
         register_number: 'Número de registro'
+      course:
+        name: Nome
+        description: 'Descrição'
+      classroom:
+        student_id: Estudante
+        course_id: Curso
   enumerations:
     status:
       active: Ativo
       inactive: Inativo
+  template:
+    default:
+      save: 'Salvar'
+    course:
+      new: 'Novo curso'
+    student:
+      new: 'Novo estudante'
+    student:
+      new: 'Relação estudante/curso'
