@@ -1,5 +1,11 @@
-table#courses
-  - @courses.each do |course|
+table#courses.table
+  h3 = 'Lista de cursos'
+  thead
     tr
-      td= course.name
-      td= course.description
+      th = Course.human_attribute_name('name')
+      th = Course.human_attribute_name('description')
+  tbody
+    - @courses.each do |course|
+      tr
+        td= course.name
+        td= course.description

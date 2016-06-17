@@ -1,4 +1,10 @@
-table#students
+table#students.table
+  h3 = 'Lista de estudantes'
+  thead
+    tr
+      th = Student.human_attribute_name('name')
+      th = Student.human_attribute_name('register_number')
+  tbody
   - @students.each do |student|
     tr
       td= student.name
