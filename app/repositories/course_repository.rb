@@ -1,5 +1,7 @@
 module CourseRepository
+  @course = Course
+
   def self.all
-    Course.all
+    @course.all
   end
 end

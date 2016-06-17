@@ -1,5 +1,7 @@
 module StudentRepository
+  @student = Student
+
   def self.all
-    Student.all
+    @student.all
   end
 end
