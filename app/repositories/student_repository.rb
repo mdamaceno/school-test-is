@@ -1,3 +1,2 @@
 module StudentRepository
-
 end
