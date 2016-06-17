@@ -15,4 +15,4 @@ div#classroom-form
         - course.students(course.id).each do |course|
           tr
             td= course.student.name
-            td= course.entry_at
+            td= dmyhm course.entry_at
