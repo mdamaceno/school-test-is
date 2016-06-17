@@ -1,5 +1,7 @@
 class CoursesController < ApplicationController
   def index
+    @courses = CourseRepository.all
+    respond_with(@courses)
   end
 
   def new

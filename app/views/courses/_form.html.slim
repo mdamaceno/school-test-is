@@ -1,0 +1,24 @@
+= simple_form_for(@course) do |f|
+  - if @course.errors.any?
+  #error_explanation
+    - @course.errors.each do |error|
+      li
+        = error
+
+  .form-group
+    = f.input :name
+
+  .form-group
+    = f.input :description
+
+  .form-group
+    #status
+      label
+        = f.radio_button :status, 1, checked: true, value: Status::ACTIVE
+        = Status.t(1)
+
+        = f.radio_button :status, 0, value: Status::INACTIVE
+        = Status.t(0)
+
+  .form-actions.text-right
+    button.btn.btn-primary type="submit" = 'Save'
