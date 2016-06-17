@@ -18,8 +18,16 @@ pt-BR:
           attributes:
             name:
               blank: 'Nome não pode ser vazio'
+              too_long: 'Nome deve ter até 45 caracteres'
             register_number:
               blank: 'Número de registro não pode ser vazio'
+              too_long: 'Número de registro deve ter até 45 caracteres'
+              not_a_number: 'Número de registro deve conter apenas números'
+        course:
+          attributes:
+            name:
+              blank: 'Nome não pode ser vazio'
+              too_long: 'Nome deve ter até 45 caracteres'
   enumerations:
     status:
       active: Ativo
