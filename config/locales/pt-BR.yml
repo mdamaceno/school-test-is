@@ -39,6 +39,7 @@ pt-BR:
   template:
     default:
       save: 'Salvar'
+      back: 'Voltar'
       welcome: 'Bem vindo ao School'
     course:
       new: 'Novo curso'

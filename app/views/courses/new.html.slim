@@ -1,3 +1,4 @@
 div#course-form
   h3 = I18n.t('template.course.new')
+  p = link_to I18n.t('template.default.back'), courses_path, class: 'btn btn-primary'
   = render 'form'

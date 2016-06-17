@@ -1,5 +1,7 @@
 table#students.table
   h3 = 'Lista de estudantes'
+  p = link_to I18n.t('template.default.back'), root_path, class: 'btn btn-xs btn-primary'
+  p = link_to I18n.t('template.student.new'), new_student_path, class: 'btn btn-success'
   thead
     tr
       th = Student.human_attribute_name('name')

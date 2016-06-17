@@ -1,5 +1,7 @@
 table#courses.table
   h3 = 'Lista de cursos'
+  p = link_to I18n.t('template.default.back'), root_path, class: 'btn btn-xs btn-primary'
+  p = link_to I18n.t('template.course.new'), new_course_path, class: 'btn btn-success'
   thead
     tr
       th = Course.human_attribute_name('name')
