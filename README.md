@@ -20,6 +20,7 @@ In those two files, you need to declare the variables ``DB_USERNAME`` and ``DB_P
 Run these commands in project's root directory:
 
 ```
+$ bundle install
 $ rake db:create
 $ rake db:migrate
 $ RAILS_ENV=test rake db:test:prepare
