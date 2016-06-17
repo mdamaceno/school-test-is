@@ -8,11 +8,11 @@
 
   .form-group
     = f.label :student_id
-    = f.select :student_id, @students.map { |s| [s.name, s.id] }, include_blank: true
+    = f.select :student_id, Student.all.map { |s| [s.name, s.id] }, include_blank: true
 
   .form-group
     = f.label :course_id
-    = f.select :course_id, @courses.map { |s| [s.name, s.id] }, include_blank: true
+    = f.select :course_id, Course.all.map { |s| [s.name, s.id] }, include_blank: true
 
   .form-actions.text-right
     button.btn.btn-primary type="submit" = 'Save'
