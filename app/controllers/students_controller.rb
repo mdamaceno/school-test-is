@@ -1,5 +1,7 @@
 class StudentsController < ApplicationController
   def index
+    @students = StudentRepository.all
+    respond_with(@students)
   end
 
   def new
