@@ -1,5 +1,7 @@
 # TEST PROJECT SCHOOL
 
+Demo: [https://schooltestis.herokuapp.com](https://schooltestis.herokuapp.com)
+
 To run this project, you will need:
 
 * Rails 4.2.6
