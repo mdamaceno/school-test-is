@@ -1,6 +1,6 @@
 # TEST PROJECT SCHOOL
 
-Demo: [schooltestis.herokuapp.com](schooltestis.herokuapp.com)
+Demo: [schooltestis.herokuapp.com](https://schooltestis.herokuapp.com)
 
 To run this project, you will need:
 
