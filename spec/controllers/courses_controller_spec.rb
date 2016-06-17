@@ -5,10 +5,8 @@ describe CoursesController, type: :controller do
     before do
       get :index
     end
-    it { is_expected.to respond_with :ok }
-    it { is_expected.to respond_with_content_type :html }
-    it { is_expected.to render_with_layout :application }
-    it { is_expected.to render_template :index }
+
+    check_response_with_template('index')
 
     it 'returns all the courses' do
       course = create(:course)
@@ -20,19 +18,15 @@ describe CoursesController, type: :controller do
     before do
       get :new
     end
-    it { is_expected.to respond_with :ok }
-    it { is_expected.to respond_with_content_type :html }
-    it { is_expected.to render_with_layout :application }
-    it { is_expected.to render_template :new }
+
+    check_response_with_template('new')
   end
 
   describe 'GET #edit' do
     before do
       get :edit, id: 1
     end
-    it { is_expected.to respond_with :ok }
-    it { is_expected.to respond_with_content_type :html }
-    it { is_expected.to render_with_layout :application }
-    it { is_expected.to render_template :edit }
+
+    check_response_with_template('edit')
   end
 end
