@@ -39,3 +39,5 @@ group :test do
   gem 'capybara'
   gem 'brakeman', require: false
 end
+
+gem 'rails_12factor', group: :production
