@@ -28,3 +28,7 @@ pt-BR:
           attributes:
             name:
               blank: ''
+  enumerations:
+    status:
+      active: Ativo
+      inactive: Inativo
