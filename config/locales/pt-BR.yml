@@ -21,13 +21,6 @@
 
 pt-BR:
   hello: "Hello world"
-  activerecord:
-    errors:
-      models:
-        student:
-          attributes:
-            name:
-              blank: ''
   enumerations:
     status:
       active: Ativo
