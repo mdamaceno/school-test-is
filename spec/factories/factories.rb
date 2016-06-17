@@ -10,4 +10,10 @@ FactoryGirl.define do
     description Faker::Lorem.characters(45)
     status 1
   end
+
+  factory :classroom do
+    association :student, factory: :student
+    association :course, factory: :course
+    entry_at Time.now
+  end
 end
