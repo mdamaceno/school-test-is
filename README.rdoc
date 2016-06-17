@@ -24,6 +24,6 @@ $ RAILS_ENV=test rake db:test:prepare
 $ bower install
 ```
 
-## TESTS
+## Tests
 
 After that, run ``rspec`` to see if all is ok.
