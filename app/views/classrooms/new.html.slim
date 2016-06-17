@@ -2,3 +2,16 @@ div#classroom-form
   h3 = I18n.t('template.classroom.new')
   p = link_to I18n.t('template.default.back'), root_path, class: 'btn btn-primary'
   = render 'form'
+
+  - @courses.each do |course|
+    h4 = course.name
+    table.table
+      thead
+        tr
+          th = Classroom.human_attribute_name('student_id')
+          th = Classroom.human_attribute_name('entry_at')
+      tbody
+      - course.students(course.id).each do |course|
+        tr
+          td= course.student.name
+          td= course.entry_at

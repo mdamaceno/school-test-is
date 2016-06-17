@@ -1,5 +1,6 @@
 class ClassroomsController < ApplicationController
   def new
+    @courses = Course.all
     @classroom = Classroom.new
   end
 

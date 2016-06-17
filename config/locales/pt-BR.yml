@@ -32,6 +32,7 @@ pt-BR:
       classroom:
         student_id: Estudante
         course_id: Curso
+        entry_at: 'Matriculado em'
   enumerations:
     status:
       active: Ativo

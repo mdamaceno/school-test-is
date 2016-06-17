@@ -8,4 +8,8 @@ class Course < Base
 
   # EnumerateIt
   has_enumeration_for :status, with: Status
+
+  def students(id)
+    Classroom.where(course_id: id).includes(:student)
+  end
 end
