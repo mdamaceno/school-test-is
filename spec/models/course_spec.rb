@@ -32,12 +32,12 @@ RSpec.describe Course, type: :model do
   describe 'returns status' do
     it 'active' do
       course = build(:course, status: 1)
-      expect(course.status_humanize).to eq('active')
+      expect(course.status_humanize).to eq(Status.t(1))
     end
 
     it 'inactive' do
       course = build(:course, status: 0)
-      expect(course.status_humanize).to eq('inactive')
+      expect(course.status_humanize).to eq(Status.t(0))
     end
   end
 end

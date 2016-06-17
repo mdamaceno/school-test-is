@@ -15,12 +15,16 @@ describe 'Student management', type: :feature do
     visit '/students/new'
 
     within '#student-form' do
-      fill_in 'name', with: 'José da Silva'
-      fill_in 'register_number', with: '55889633669'
-      choose '1'
       expect do
+        fill_in Student.human_attribute_name('name'), with: 'José da Silva'
+        fill_in Student.human_attribute_name('register_number'), with: '55889633669'
+        within '#status' do
+          choose 'student_status_1'
+        end
         click_button 'Save'
       end.to change(Student, :count).by(1)
     end
+
+    expect(current_path).to eq('/students')
   end
 end

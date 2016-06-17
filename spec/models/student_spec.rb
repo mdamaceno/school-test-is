@@ -36,12 +36,12 @@ RSpec.describe Student, type: :model do
   describe 'returns status' do
     it 'active' do
       student = build(:student, status: 1)
-      expect(student.status_humanize).to eq('active')
+      expect(student.status_humanize).to eq(Status.t(1))
     end
 
     it 'inactive' do
       student = build(:student, status: 0)
-      expect(student.status_humanize).to eq('inactive')
+      expect(student.status_humanize).to eq(Status.t(0))
     end
   end
 end

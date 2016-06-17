@@ -21,6 +21,11 @@
 
 pt-BR:
   hello: "Hello world"
+  activerecord:
+    attributes:
+      student:
+        name: Nome
+        register_number: 'Número de registro'
   enumerations:
     status:
       active: Ativo
