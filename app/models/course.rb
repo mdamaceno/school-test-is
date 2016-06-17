@@ -1,4 +1,6 @@
 class Course < Base
+  has_many :classrooms
+
   # Validations
   validates :name, :status, presence: true
   validates :name, :description, length: { maximum: 45 }

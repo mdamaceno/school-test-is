@@ -1,4 +1,6 @@
 class Student < Base
+  has_one :classrooms
+
   # Validations
   validates :name, :register_number, :status, presence: true
   validates :name, :register_number, length: { maximum: 45 }
