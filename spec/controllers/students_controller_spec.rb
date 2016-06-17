@@ -33,4 +33,19 @@ describe StudentsController, type: :controller do
 
     check_response_with_template('edit')
   end
+
+  describe 'POST #create' do
+    context 'with valid attributes' do
+      it 'saves the new student in the database' do
+        expect do
+          post :create, student: attributes_for(:student)
+        end.to change(Student, :count).by(1)
+      end
+
+      it 'redirects to the student#index' do
+        post :create, student: attributes_for(:student)
+        expect(response).to redirect_to action: :index
+      end
+    end
+  end
 end

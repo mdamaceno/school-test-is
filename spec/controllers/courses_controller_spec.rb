@@ -26,6 +26,21 @@ describe CoursesController, type: :controller do
     end
   end
 
+  describe 'POST #create' do
+    context 'with valid attributes' do
+      it 'saves the new course in the database' do
+        expect do
+          post :create, course: attributes_for(:course)
+        end.to change(Course, :count).by(1)
+      end
+
+      it 'redirects to the course#index' do
+        post :create, course: attributes_for(:course)
+        expect(response).to redirect_to action: :index
+      end
+    end
+  end
+
   describe 'GET #edit' do
     before do
       get :edit, id: 1
