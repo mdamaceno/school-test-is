@@ -2,7 +2,7 @@
   - if @classroom.errors.any?
   #error_explanation
     ul
-      - @classroom.errors.each do |error|
+      - @classroom.errors.full_messages.each do |error|
         li
           = error
 
