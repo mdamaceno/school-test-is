@@ -42,7 +42,10 @@ pt-BR:
       welcome: 'Bem vindo ao School'
     course:
       new: 'Novo curso'
+      list: 'Lista de cursos'
     student:
       new: 'Novo estudante'
-    student:
+      list: 'Lista de estudantes'
+    classroom:
       new: 'Relação estudante/curso'
+      list: 'Relação estudante/curso'
