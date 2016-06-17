@@ -1,28 +1,26 @@
-== README
+# TEST PROJECT SCHOOL
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To run this project, you will need:
 
-Things you may want to cover:
+* Ruby >= 2.3.1
+* Bower
+* PostgreSQL
 
-* Ruby version
+In the project's root directory, create dotfiles and declare the environment variables to connect database:
 
-* System dependencies
+```
+$ touch .env.development .env.test
+```
 
-* Configuration
+In those two files, you need to declare the variables ``DB_USERNAME`` and ``DB_PASSWORD``.
 
-* Database creation
+Run these commands in project's root directory:
 
-* Database initialization
+```
+$ rake db:create
+$ rake db:migrate
+$ RAILS_ENV=test rake db:test:prepare
+$ bower install
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+After that, run ``rspec`` to see if all is ok.
