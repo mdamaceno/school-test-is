@@ -15,7 +15,12 @@ In the project's root directory, create dotfiles and declare the environment var
 $ touch .env.development .env.test
 ```
 
-In those two files, you need to declare the variables ``DB_USERNAME`` and ``DB_PASSWORD``.
+In those two files, you need to declare the variables ``DB_USERNAME`` and ``DB_PASSWORD``. Ex.:
+
+```
+DB_USERNAME=username
+DB_PASSWORD=password
+```
 
 Run these commands in project's root directory:
 
